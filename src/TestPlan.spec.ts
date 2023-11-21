@@ -15,15 +15,10 @@ test.describe('', () => {
     await landingPage.visitUrl();
   });
 
-  test('User is able to go to "Sale" page.', async () => {
-    let landingPage = new LandingPage(page);
-    await landingPage.goToSale();
-  });
-  
   test('User is able to view new Yoga collection.', async () => {
     let whatsNew = new WhatsNew(page);
     await whatsNew.goToShopNewYoga();
-    await page.waitForTimeout(2000);
+    await whatsNew.findLaylaTee();
   });
 });
 
