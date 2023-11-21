@@ -2,7 +2,9 @@ import { Page } from "@playwright/test";
 
 export class LandingPage{
 
-    landingPageLocators = []
+    landingPageLocators = {
+    shopNewYogaBtn:() => this.page.locator("//span[@class='content']//span[@class='more button']")
+    }
 
     public async visitUrl():Promise<void>{
         await this.page.goto('https://magento.softwaretestingboard.com/');
@@ -10,10 +12,6 @@ export class LandingPage{
 
     public async goToSale():Promise<void>{
         await this.page.locator("//div[@class='section-item-content nav-sections-item-content']//span[contains(., 'What')]").click();
-    }
-
-    public async checkNewYogaAttire():Promise<void>{
-        
     }
 
     constructor(public page: Page){
