@@ -9,7 +9,7 @@ export class WomenBar{
 
 public async womenBar():Promise<void>{
     await this.womenBarLocator.womenNavBar().click();
-    await this.womenBarLocator.topOption().selectOption;
+    await this.womenBarLocator.topOption()
     }
     constructor(public page: Page){
         pageFixture.page = page;
