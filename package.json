@@ -3,7 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+<<<<<<< HEAD
+  "scripts": {
+    "headed:chrome": "npx playwright test --project chromium --headed"
+  },
+=======
   "scripts": {},
+>>>>>>> 833c98ca7fc8a97172b06c27612bf3dc2f974691
   "keywords": [],
   "author": "",
   "license": "ISC",
