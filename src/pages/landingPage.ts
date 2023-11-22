@@ -1,5 +1,4 @@
 import { Page } from "@playwright/test";
-import { pageFixture } from "../Hooks/pageFixture";
 
 export class LandingPage{
 
@@ -8,6 +7,6 @@ export class LandingPage{
     }
 
     constructor(public page: Page){
-        pageFixture.page = page;
+        this.page = page;
     }
 }
