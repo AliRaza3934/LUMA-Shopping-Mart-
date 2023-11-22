@@ -18,7 +18,7 @@ test.describe('', () => {
   test('User is able to view new Yoga collection.', async () => {
     let whatsNew = new WhatsNew(page);
     await whatsNew.goToShopNewYoga();
-    await whatsNew.findLaylaTee();
+    await whatsNew.findAllAttire();
   });
 });
 

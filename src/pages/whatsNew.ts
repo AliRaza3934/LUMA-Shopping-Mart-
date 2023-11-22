@@ -13,7 +13,7 @@ export class WhatsNew{
         await expect(this.page).toHaveURL('https://magento.softwaretestingboard.com/collections/yoga-new.html');
     }
 
-    public async findLaylaTee():Promise<void>{
+    public async findAllAttire():Promise<void>{
         await this.page.waitForSelector("//div[@class='products wrapper grid products-grid']//li[12]");
         const findAllAttire = await this.page.locator("//div[@class='products wrapper grid products-grid']//li").count();
         console.log('\n' + 'Number of items found: ' + findAllAttire + '\n')
