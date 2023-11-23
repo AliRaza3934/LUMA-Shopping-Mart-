@@ -16,9 +16,11 @@ test.describe('', () => {
   });
 
   test('User is able to view new Yoga collection.', async () => {
+    let getUserAttire = 'Ida Workout Parachute Pant'
     let whatsNew = new WhatsNew(page);
     await whatsNew.goToShopNewYoga();
     await whatsNew.findAllAttire();
+    await whatsNew.selectNoraPractice(getUserAttire);
   });
 });
 

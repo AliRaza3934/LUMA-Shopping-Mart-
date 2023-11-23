@@ -1,6 +1,10 @@
 import { Page, expect } from "@playwright/test";
 
+let getUserInput = "Nora"
+
 export class WhatsNew{
+
+   
 
     whatsNewLocators = {
         whatsNewTab:() => this.page.locator("//div[@class='section-item-content nav-sections-item-content']//span[contains(., 'What')]"),
@@ -23,6 +27,10 @@ export class WhatsNew{
             const textOutput = [text]
             process.stdout.write(''+i+' | Name of Product -> '+`${textOutput}`.trim());
         }
+}
+
+public async selectNoraPractice(getUserInput: string):Promise<void>{
+    await this.page.locator("//div[@class='products wrapper grid products-grid']//li//a[contains(., '"+getUserInput+"')]").click();
 }
 
 
