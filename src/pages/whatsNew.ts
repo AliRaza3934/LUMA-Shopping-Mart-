@@ -4,13 +4,15 @@ export class WhatsNew{
 
     whatsNewLocators = {
         whatsNewTab:() => this.page.locator("//div[@class='section-item-content nav-sections-item-content']//span[contains(., 'What')]"),
-        shopNewYogaBtn:() => this.page.locator("//span[@class='content']//span[@class='more button']").first()
+        shopNewYogaBtn:() => this.page.locator("//span[@class='content']//span[@class='more button']").first(),
+       
     }
 
     public async goToShopNewYoga():Promise<void>{
         await this.whatsNewLocators.whatsNewTab().click();
         await this.whatsNewLocators.shopNewYogaBtn().click();
         await expect(this.page).toHaveURL('https://magento..com/collections/yoga-new.html');
+        
     }
 
     public async findLaylaTee():Promise<void>{
